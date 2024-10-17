@@ -12,6 +12,7 @@ const Navbar = () => {
     >
       <Typography
         sx={{
+          fontSize:'25px',
           paddingLeft: 2,
           fontWeight: 700,
         }}
