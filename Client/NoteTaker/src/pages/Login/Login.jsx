@@ -5,6 +5,7 @@ import { IoEyeSharp } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, IconButton, InputAdornment, TextField, Typography } from '@mui/material'
 import { validateEmail, validatePassword } from '../../utils/helper.mjs';
+import ForgotPasswordDialog from '../../components/ForgotPassword/ForgotPasswordDialog';
 
 const Login = () => {
   const navigate = useNavigate()
@@ -14,12 +15,30 @@ const Login = () => {
   })
   const [isEmailError, setIsEmailError] = useState(false);
   const [isPasswordError, setIsPasswordError] = useState(false);
-
+  const [isForgotPassClick, setIsForgotPassClick] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
 
+  const checkValidation = () => {
+    if (loginData.email === '' || !validateEmail(loginData.email)) {
+      setIsEmailError(true)
+      return false
+    }
+    if (loginData.password === '' || !validatePassword(loginData.password)) {
+      setIsPasswordError(true)
+      return false
+    }
 
-  const handleLogin = () => {
-    navigate('/dashboard')
+    return true
+  }
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    let validateLoginFormData = checkValidation()
+
+    if (validateLoginFormData) {
+      navigate('/signup')
+    }
+
   }
   const toggleShowPassword = () => {
     setShowPassword(!showPassword)
@@ -126,9 +145,12 @@ const Login = () => {
                 '&:hover': {
                   backgroundColor: 'transparent',  // Add hover styles here
                 }
-              }}>Forgot Password</Button>
+              }}
+              onClick={() => setIsForgotPassClick(true)}
+
+            >Forgot Password ?</Button>
           </Typography>
-          <Button onClick={handleLogin} sx={{
+          <Button onClick={(e) => handleLogin(e)} sx={{
             background: 'lightblue',
             width: '100%',
             py: 1,
@@ -158,6 +180,7 @@ const Login = () => {
 
         </Box>
       </Box>
+      <ForgotPasswordDialog close={() => setIsForgotPassClick(false)} open={isForgotPassClick} />
     </>
   )
 }
