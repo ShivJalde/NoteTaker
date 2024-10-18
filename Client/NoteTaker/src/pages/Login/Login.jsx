@@ -21,6 +21,7 @@ const Login = () => {
   const checkValidation = () => {
     if (loginData.email === '' || !validateEmail(loginData.email)) {
       setIsEmailError(true)
+      if (loginData.password === '') setIsPasswordError(true);
       return false
     }
     if (loginData.password === '' || !validatePassword(loginData.password)) {
@@ -36,7 +37,7 @@ const Login = () => {
     let validateLoginFormData = checkValidation()
 
     if (validateLoginFormData) {
-      navigate('/signup')
+      //Login api call
     }
 
   }
