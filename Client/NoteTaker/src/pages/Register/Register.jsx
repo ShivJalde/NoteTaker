@@ -61,12 +61,11 @@ const Register = () => {
   }
   return (
     <>
-      <Navbar />
       <Box sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: 'center',
-        mt: 5,
+        mt: 14,
       }}>
         <Box sx={{
           width: {

@@ -46,12 +46,11 @@ const Login = () => {
   }
   return (
     <>
-      <Navbar />
       <Box sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: 'center',
-        mt: 10,
+        mt: 18,
       }}>
         <Box sx={{
           width: {
