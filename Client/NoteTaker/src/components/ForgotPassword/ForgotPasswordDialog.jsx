@@ -1,9 +1,8 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Typography } from '@mui/material'
-import { enqueueSnackbar, useSnackbar } from 'notistack'
+import { enqueueSnackbar } from 'notistack'
 import React from 'react'
 
 const ForgotPasswordDialog = ({ open, close }) => {
-    const { enqueSnackbar } = useSnackbar();
     return (
         <Dialog open={open} close={close} onClose={close} maxWidth={'sm'}>
             <DialogTitle>

@@ -21,11 +21,11 @@ const Navbar = () => {
     <Box
       sx={{
         p: 0.5,
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',
+        boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.36)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: "#624E88"
+        backgroundColor: "white"
       }}
     >
       <Typography
@@ -33,7 +33,7 @@ const Navbar = () => {
           fontSize: '25px',
           paddingLeft: 2,
           fontWeight: 700,
-          color: 'whitesmoke'
+          color: 'black'
         }}
       >
         Notes
@@ -49,7 +49,7 @@ const Navbar = () => {
           justifyContent: 'center',
           alignItems: 'center',
           gap: 2,
-          backgroundColor: '#8967B3',
+          backgroundColor: 'lightslategrey',
           padding: 2,
           marginRight: 1,
           cursor: 'pointer'
@@ -63,7 +63,7 @@ const Navbar = () => {
           }}
         >
           <Typography sx={{
-            color: "wheat"
+            color: "black"
           }}>
             Shivraj Jalde
           </Typography>

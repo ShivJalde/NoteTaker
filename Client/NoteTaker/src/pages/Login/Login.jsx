@@ -130,7 +130,7 @@ const Login = () => {
             }}
             error={isPasswordError && loginData.password === '' || isPasswordError && !validatePassword(loginData.password)}
             helperText={
-              isPasswordError && loginData.password === '' ? 'Password is Required' : isPasswordError && !validatePassword(loginData.password) ? 'Invalid password: Must include at least 8 char, an 1 num, an 1 uppercase letter, an 1 special char' : ''
+              isPasswordError && loginData.password === '' ? 'Password is Required' : isPasswordError && !validatePassword(loginData.password) ? 'Invalid password: Must include at least 8 char, an 1 num, an 1 upper & 1 lowercase letter, an 1 special char' : ''
             }
           />
           <Typography sx={{

@@ -6,7 +6,7 @@ const Searchbar = ({ value, onChange, handleSearch, onClearSearch }) => {
     return (
         <Box >
             <TextField sx={{
-                backgroundColor: "#E6D9A2"
+                backgroundColor: "lightgrey"
                 ,
                 width: {
                     xs: '300px',
